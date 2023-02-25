@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSelector } from 'react-redux' // useSelector() คือ การดึง state ที่อยู่ใน redux store มา
 
-interface IRootState { } 
+interface IRootState { } // https://stackoverflow.com/questions/57472105/react-redux-useselector-typescript-type-for-state
 
 function Page2() {
 

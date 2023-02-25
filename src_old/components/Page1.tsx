@@ -1,12 +1,16 @@
 import React from 'react'
 import { useSelector } from 'react-redux' // useSelector() คือ การดึง state ที่อยู่ใน redux store มา
 
-interface IRootState { } 
+interface IRootState { } // https://stackoverflow.com/questions/57472105/react-redux-useselector-typescript-type-for-state
 
-function Page2() {
+function Page1() {
+    const { user } = useSelector<IRootState, any>(state => ({ ...state }))
+    console.log(user)
+    console.table(user)
 
     const { pfusers } = useSelector<IRootState, any>(state => ({ ...state }))
     console.log(pfusers)
+    console.table(pfusers)
 
     return (
         <>
@@ -19,9 +23,10 @@ function Page2() {
                     </div>
                 )
             })}
+            {user}
         </>
     )
 }
 
-export default Page2
+export default Page1
 

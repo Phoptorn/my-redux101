@@ -1,13 +1,13 @@
 import { combineReducers } from "redux";
 
-import { stringReducer } from "./stringReducers";
-import { numberReducer } from "./numberReducers";
+import { itReducer } from "./itReducers";
+import { userReducer } from "./userReducers";
 
 import { pfusersReducer } from "./pfusers";
 
 const rootReducer = combineReducers({
-    string: stringReducer,
-    number: numberReducer,
+    user: userReducer,
+    it: itReducer,
     
     pfusers : pfusersReducer,
 })
